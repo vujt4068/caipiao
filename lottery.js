@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const seed = getSeedFromDate(currentDate);  
     const lottoNumbers = generateLottoNumbers(seed);  
     const numbersElement = document.getElementById("lotteryNumbers");  
-    numbersElement.textContent = "" + lottoNumbers.front.join(", ") + "|" + lottoNumbers.back.join(", ");  
+    numbersElement.textContent = "号码" + lottoNumbers.front.join(", ") + " | " + lottoNumbers.back.join(", ");  
 });  
   
 function getSeedFromDate(date) {  
