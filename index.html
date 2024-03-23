@@ -1,6 +1,48 @@
-<html>
-    <frameset cols="100,*" frameborder="no">
-        <frame src="cyhsnavi1.html">
-        <frame src="https://www.bing.com">
-    </frameset>
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>大乐透号码生成器</title>  
+    <style>  
+        body {  
+            font-family: Arial, sans-serif;  
+            text-align: center;  
+            padding-top: 50px;  
+        }  
+        h1 {  
+            color: #333;  
+        }  
+        #result {  
+            margin-top: 20px;  
+            font-size: 20px;  
+        }  
+    </style>  
+</head>  
+<body>  
+    <h1>大乐透号码生成器</h1>  
+    <button onclick="generateLottoNumbers()">生成号码</button>  
+    <div id="result"></div>  
+  
+    <script>  
+        function generateLottoNumbers() {  
+            const frontNumbers = Array.from({ length: 35 }, (_, i) => i + 1);  
+            const backNumbers = Array.from({ length: 12 }, (_, i) => i + 1);  
+  
+            // 随机选取前区5个号码  
+            const selectedFrontNumbers = Array.from(frontNumbers)  
+                .sort(() => 0.5 - Math.random())  
+                .slice(0, 5);  
+  
+            // 随机选取后区2个号码  
+            const selectedBackNumbers = Array.from(backNumbers)  
+                .sort(() => 0.5 - Math.random())  
+                .slice(0, 2);  
+  
+            // 显示结果  
+            const resultElement = document.getElementById('result');  
+            resultElement.innerHTML = `前区号码: ${selectedFrontNumbers.join(', ')}<br>后区号码: ${selectedBackNumbers.join(', ')}`;  
+        }  
+    </script>  
+</body>  
 </html>
