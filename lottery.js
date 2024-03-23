@@ -17,9 +17,7 @@ function getSeedFromDate(date) {
     return year * 10000 + month * 100 + day; // 将年月日组合成种子数  
 }  
   
-function generateLottoNumbers(seed) {  
-    // ... 伪随机数生成器和号码生成逻辑与之前相同 ...  
-}
+
 function generateLottoNumbers(seed) {  
     // Simple pseudo-random number generator (LCG) initialization  
     let a = 16807; // LCG modulus  

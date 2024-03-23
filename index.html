@@ -1,15 +1,59 @@
-<!DOCTYPE html>  
-<html lang="en">  
-<head>  
-    <meta charset="UTF-8">  
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>今日幸运号码</title>  
-    <script src="lottery.js" defer></script>  
-</head>  
-<body>  
-    <h1>今日幸运号码</h1>  
-    <p id="lotteryDate">日期</p>  
-    <p id="lotteryNumbers"></p>  
-</body>  
+<!DOCTYPE html>    
+<html lang="en">    
+<head>    
+    <meta charset="UTF-8">    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>今日幸运号码</title>    
+    <script src="lottery.js" defer></script>    
+    <style>  
+        body {  
+            font-family: 'Arial', sans-serif;  
+            color: #333;  
+            background-color: #f2f2f2;  
+            margin: 0;  
+            padding: 0;  
+        }  
+          
+        h1 {  
+            font-size: 2.5em;  
+            text-align: center;  
+            color: #007BFF;  
+            margin-top: 20px;  
+            margin-bottom: 20px;  
+        }  
+          
+        p {  
+            font-size: 1em;  
+            text-align: center;  
+            margin: 10px 0;  
+        }  
+          
+        #lotteryDate, #lotteryNumbers {  
+            font-weight: bold;  
+            color: #333;  
+        }  
+          
+        #lotteryNumbers {  
+            font-size: 1.2em;  
+        }  
+          
+        .container {  
+            max-width: 600px;  
+            margin: 0 auto;  
+            padding: 20px;  
+            background-color: #fff;  
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);  
+            border-radius: 5px;  
+        }  
+    </style>  
+</head>    
+<body>    
+    <div class="container">  
+        <h1>今日幸运号码</h1>    
+        <p>大乐透</p>    
+        <p id="lotteryDate">日期</p>    
+        <p id="lotteryNumbers"></p>    
+    </div>  
+</body>    
 </html>
