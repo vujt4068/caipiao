@@ -4,12 +4,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const dateElement = document.getElementById("lotteryDate");  
     const currentDate = new Date();  
     const formattedDate = currentDate.toISOString().split('T')[0]; // 获取日期部分，格式为 "YYYY-MM-DD"  
-    dateElement.textContent = "当前日期: " + formattedDate;  
+    dateElement.textContent = "日期: " + formattedDate;  
   
     const seed = getSeedFromDate(currentDate);  
     const lottoNumbers = generateLottoNumbers(seed);  
     const numbersElement = document.getElementById("lotteryNumbers");  
-    numbersElement.textContent = "前区号码: " + lottoNumbers.front.join(", ") + " | 后区号码: " + lottoNumbers.back.join(", ");  
+    numbersElement.textContent = "" + lottoNumbers.front.join(", ") + "|" + lottoNumbers.back.join(", ");  
 });  
   
 function getSeedFromDate(date) {  
