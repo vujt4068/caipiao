@@ -1,17 +1,25 @@
 document.addEventListener("DOMContentLoaded", function () {  
-    const seed = getSeedFromDate();  
+    const dateElement = document.getElementById("lotteryDate");  
+    const currentDate = new Date();  
+    const formattedDate = currentDate.toISOString().split('T')[0]; // 获取日期部分，格式为 "YYYY-MM-DD"  
+    dateElement.textContent = "当前日期: " + formattedDate;  
+  
+    const seed = getSeedFromDate(currentDate);  
     const lottoNumbers = generateLottoNumbers(seed);  
-    document.getElementById("lotteryNumbers").textContent = "前区号码: " + lottoNumbers.front.join(", ") + " | 后区号码: " + lottoNumbers.back.join(", ");  
+    const numbersElement = document.getElementById("lotteryNumbers");  
+    numbersElement.textContent = "前区号码: " + lottoNumbers.front.join(", ") + " | 后区号码: " + lottoNumbers.back.join(", ");  
 });  
   
-function getSeedFromDate() {  
-    const date = new Date();  
+function getSeedFromDate(date) {  
     const year = date.getFullYear();  
-    const month = date.getMonth() + 1; // getMonth() is zero-based  
+    const month = date.getMonth() + 1; // getMonth() 是零基索引  
     const day = date.getDate();  
-    return year * 10000 + month * 100 + day; // Simple way to combine year, month, and day into a seed number  
+    return year * 10000 + month * 100 + day; // 将年月日组合成种子数  
 }  
   
+function generateLottoNumbers(seed) {  
+    // ... 伪随机数生成器和号码生成逻辑与之前相同 ...  
+}
 function generateLottoNumbers(seed) {  
     // Simple pseudo-random number generator (LCG) initialization  
     let a = 16807; // LCG modulus  
