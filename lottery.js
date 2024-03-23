@@ -1,3 +1,5 @@
+
+
 document.addEventListener("DOMContentLoaded", function () {  
     const dateElement = document.getElementById("lotteryDate");  
     const currentDate = new Date();  
@@ -52,3 +54,10 @@ function generateLottoNumbers(seed) {
   
     return { front, back }; // Return an object with front and back numbers  
 }
+
+
+
+
+
+
+
